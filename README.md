@@ -115,5 +115,40 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 #### Question 20: Boot Process
 20. Outline the steps involved in the boot process of XV6. What happens from the moment the computer is powered on to when the XV6 kernel is loaded into memory?
 
+
+
+
 ## Answers
 Please write your answers here
+
+1. b
+2. c
+3. d
+4. b
+5. a
+6. c
+7. a
+8. a
+9. d
+10. b
+11. c
+12. unused,running,runnable
+
+ans 13 There are three types of files in the XV6 system: inodes, blocks, and groups. The data itself is stored in blocks, and information about files is stored in inodes. Folders link file names to inode numbers.
+
+ans 14 It makes a system call to the os when it wants to do something, like open a file. The library functions are more complex functions that make our lives easier. Most of the time, they come after system calls. Open() is a system call, while fopen() is a library method.
+
+ans 15 Virtual memory is split into pages of a certain size, and real memory is split into frames that are the same size. It's smart to use memory for paging, keeps tasks separate, and lets you do things like demand paging.
+
+ans 16 ls: Lists the files in the current directory.
+    cp: Copies files or directories.
+    rm: Removes (deletes) files or directories
+
+    
+ans 17 Synchronization of processes is used to keep many processes going smoothly and trouble-free. In XV6, locks and semaphores are used to keep shared resources from being used by too many people at once and to stop races.
+
+ans 18 Interrupts are events that make the CPU temporarily hand over control to a different piece of code. ISRs, or interrupt service routines, handle events in XV6.
+
+ans 19 Virtual memory makes a "idealized abstraction" of your computer's storage resources when you use it to control your memory. XV6 makes virtual memory with swapping. It is easy to write programs and good use of memory when processes are kept separate.
+
+ans 20 The BIOS or UEFI software sets up the hardware, loads the bootloader (like GRUB), and then loads the XV6 kernel into memory. The kernel then takes over, sets up the data structures it needs, and starts the process of setup. It goes to the user area and starts the shell in the end.
